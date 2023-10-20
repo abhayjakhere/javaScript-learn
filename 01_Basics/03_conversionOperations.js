@@ -28,3 +28,12 @@ let num = 3
 let inString = String(num)
 console.log(typeof (inString));
 console.log(inString);
+
+/********************************************** OPERATIONS **************************************************** */
+
+console.log(2+2);  // Addition
+console.log(2-2);  // Subtraction 
+console.log(2*2);  // Multiplication
+console.log(2**3); // 2 to the power 3
+console.log(2/2);  // Divide
+console.log(2%2);  // Reminder

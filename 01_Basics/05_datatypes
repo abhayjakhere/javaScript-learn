@@ -1,0 +1,18 @@
+// Primitive (Pass by value). Datatypes are divided into two parts primitve (Pass by value (copy)) and non-primitive(Pass by reference).
+// 7 Types
+/*
+    1. string
+    2. number
+    3. boolean
+    4. null (empty)
+    5. undefined (memory declare hai but value kya rahegi abhi malum nhi)
+    6. symbol (use to make value unique)
+    7. BigInt (values which are big and not cover in number are manage by bigint).
+ */
+
+// non-primitive
+/*
+    1. array
+    2. objects  // if you want to master javascript master objects in javascript and master browser web events or browser events master this two topics you will become javascript master.
+    3. functions
+ */
