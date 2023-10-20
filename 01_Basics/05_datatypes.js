@@ -16,3 +16,29 @@
     2. objects  // if you want to master javascript master objects in javascript and master browser web events or browser events master this two topics you will become javascript master.
     3. functions
  */
+
+
+// all the primitive values goes in stack and makes copy
+// all the non - primitive values are store in heap memory where they get address of value and works on same value if any reference
+// make change in it then it will change the actual value
+
+let myName = "Abhay"
+
+let myOtherName = myName
+
+myName = "Abhijeet"
+
+console.log(myName);
+console.log(myOtherName);
+
+let userOne = {
+    name : "Abhay",
+    rollNo : 22
+}
+
+let userTwo = userOne
+
+userTwo.name = "Abhijeet"
+
+console.log(userOne.name);
+console.log(userTwo.name);
