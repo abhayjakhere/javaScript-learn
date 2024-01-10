@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur Code</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <ul class="Language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(name){
+        const parent = document.querySelector('.Language')
+        // console.log(parent);
+        const li = document.createElement('li')
+        li.innerHTML=`${name}`
+        parent.appendChild(li)
+    }
+    function addOptiLanguage(name){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(name));
+        document.querySelector('.Language').appendChild(li)
+
+    }
+    addLanguage('cpp')
+    addLanguage('python')
+    addOptiLanguage('java')
+    addOptiLanguage('ruby')
+    addOptiLanguage('golang')
+
+    // edit change third language python to typescript
+    const thirdLang = document.querySelector('li:nth-child(3)');
+    const newLi = document.createElement('li');
+    newLi.textContent=('typescript')
+    thirdLang.replaceWith(newLi);
+
+    // edit 
+    const firstLang = document. querySelector('li:first-child')
+    firstLang.outerHTML='<li>react</li>'
+
+    // remove
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove();
+
+</script>
+</html>
