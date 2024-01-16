@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #414141;
+            color: aliceblue;
+        }
+        .image{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Amazing images</h2>
+    <div>
+        <ul id="images">
+            <li><img id="mob" class="image" src="https://i.pinimg.com/564x/79/05/ea/7905eaa4981f9220899b848be5badec8.jpg" alt="mob-psycho"></li>
+            <li><img id="ace" class="image" src="https://i.pinimg.com/564x/8b/a8/de/8ba8de0fc6522b881d96d8868a4a94f9.jpg" alt="portgasDAce"></li>
+            <li><img id="back" class="image" src="https://i.pinimg.com/564x/fa/4d/30/fa4d300ac610acec7f02f872958f9a99.jpg" alt="BackPose"></li>
+            <li><img id="zoro" class="image" src="https://i.pinimg.com/564x/89/60/56/896056ec3e9dbe88f0a1fdf9f0fdfc17.jpg" alt="roronoa-zoro"></li>
+            <li><img id="rohit" class="image" src="https://i.pinimg.com/564x/7a/7f/35/7a7f3533ad3af79bab1a0cc26594fc7d.jpg" alt="rohitSharma-fan"></li>
+            <a style="color: aliceblue;" href="https://google.com" id="google">google</a>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('mob').onclick = () => {
+    //     alert("mob clicked")
+    // }
+    
+  // type (events), timestamp, defaultPrevented
+    //target, toElement, srcElement, currentTarget
+    // clientX , clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keycode
+
+
+// document.getElementById('images').addEventListener('click', function(e){
+//     console.log("clicked inside ul");
+// },false)
+// document.getElementById('ace').addEventListener('click', function(e){
+//     console.log("Ace clicked");
+//     e.stopPropagation()
+// },false)
+
+// // preventDefault
+
+// document.getElementById('google').addEventListener('click', function(e){
+//     e.preventDefault()
+//     e.stopPropagation()
+//     console.log("goolge clicked");
+// })
+
+// // now the goal is to hide or remove image on click
+document.querySelector('#images').addEventListener('click',function(e){
+    if(e.target.tagName === 'IMG'){
+        let removeIt = e.target.parentNode
+        removeIt.remove()
+    // removeIt.parentNode.removeChild(removeIt)
+    }
+},false)
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
