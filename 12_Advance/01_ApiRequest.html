@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: #212121;
+        color: #fff;
+    }
+</style>
+<body>
+    <h1>Learning Api request</h1>
+    <h3>click on get button to get hitesh choudhary card</h3>
+    <button id="get">GET</button>
+    <br>
+    <div class="card">
+        <img class="imgId" src="" alt="" style="width:300px">
+        <div class="container">
+            <p class="bio"></p>
+            <p class="followers"></p>
+        </div>
+    </div>
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET',requestUrl)
+    xhr.onreadystatechange = function(){
+        if(xhr.readyState===4){
+            const data = JSON.parse(this.responseText)
+            console.log(data);
+            document.querySelector('#get').addEventListener('click', () => {
+                document.querySelector('.imgId').setAttribute('src',data.avatar_url)
+                document.querySelector('.bio').innerHTML = `<p class="bio"">${data.bio}</p>`
+                document.querySelector('.followers').innerHTML = `<p class="followers">followers: ${data.followers}</p>`
+            })
+        }
+    }
+    xhr.send()
+</script>
+</html>
